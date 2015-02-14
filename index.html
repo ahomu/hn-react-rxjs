@@ -1,0 +1,170 @@
+<html>
+<body>
+<style>
+html, body {
+  font-family: Verdana;
+  font-size: 13px;
+  margin: 0;
+  height: 100%;
+  background-color: #f6f6ef;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+ol {
+  margin-top: 0;
+}
+
+a {
+  color: #000;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+#header {
+  background-color: #f60;
+  height: 24px;
+  position: relative;
+}
+#header h1 {
+  font-weight: bold;
+  font-size: 13px;
+  display: inline-block;
+  vertical-align: middle;
+  margin: 0;
+}
+#header .source {
+  color: #fff;
+  font-size: 11px;
+  position: absolute;
+  top: 4px;
+  right: 4px;
+}
+#header .source a {
+  color: #fff;
+}
+#header .source a:hover {
+  text-decoration: underline;
+}
+
+#yc {
+  border: 1px solid #fff;
+  margin: 2px;
+  display: inline-block;
+  vertical-align: middle;
+}
+#yc img {
+  vertical-align: middle;
+}
+
+.view {
+  position: absolute;
+  width: 100%;
+  box-sizing: border-box;
+  padding: 8px 20px;
+}
+
+.item {
+  padding: 2px 0 2px 0;
+  position: relative;
+  transition: background-color .2s ease;
+}
+.item p {
+  margin: 2px 0;
+}
+.item .title:visited {
+  color: #828282;
+}
+.item .index {
+  color: #828282;
+  position: absolute;
+  width: 30px;
+  text-align: right;
+  left: 0;
+  top: 4px;
+}
+.item .domain,
+.item .subtext {
+  font-size: 11px;
+  color: #828282;
+}
+.item .domain a,
+.item .subtext a {
+  color: #828282;
+}
+.item .subtext a:hover {
+  text-decoration: underline;
+}
+.comhead {
+  color: #828282;
+  font-size: 11px;
+  margin-bottom: 8px;
+}
+.comhead a {
+  color: #828282;
+}
+.comhead a:hover {
+  text-decoration: underline;
+}
+.comhead .toggle {
+  margin-right: 4px;
+}
+.comment-content {
+  margin: 0 0 16px 24px;
+}
+.child-comments {
+  margin: 8px 0 8px 22px;
+}
+
+.is-hidden {
+  display: none;
+}
+
+.item-view .item {
+  padding-left: 0;
+  margin-bottom: 30px;
+}
+.item-view .item .index,
+.item-view .item .comments-link {
+  display: none;
+}
+
+.news-view {
+  padding-left: 0;
+  padding-right: 0;
+}
+.news-view .nav {
+  padding: 10px 10px 10px 40px;
+  margin-top: 10px;
+  border-top: 2px solid #f60;
+}
+.news-view .nav a {
+  margin-right: 10px;
+}
+.news-view .nav a:hover {
+  text-decoration: underline;
+}
+.user-view {
+  color: #828282;
+}
+.user-view li {
+  margin: 5px 0;
+}
+.user-view .label {
+  display: inline-block;
+  min-width: 60px;
+}
+.user-view .about {
+  margin-top: 1em;
+}
+.user-view .links a {
+  text-decoration: underline;
+}
+</style>
+<div id="content"></div>
+<script src="dist/hn-react-rxjs.min.js"></script>
+</body>
+</html>
