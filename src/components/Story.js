@@ -30,9 +30,9 @@ module.exports = React.createClass({
   },
 
   componentWillMount() {
-    HNItemStoreActions.fetchItem(this.props.storyId);
     this.storySubscription = HNItemStore.item(this.props.storyId).subscribe((story) => {
       HNItemStoreActions.fetchItems(story.kids);
+      // TODO parent単位でsubscribeできるようにすべき
       this.commentsSubscription = HNItemStore.items(story.kids).subscribe((comments) => {
           this.setState({comments: comments});
         });

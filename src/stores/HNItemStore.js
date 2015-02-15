@@ -38,10 +38,11 @@ function setItem(item) {
 function publishItem(id) {
   let subject = ItemObservables[id];
   let item    = ItemsRepository[ItemsIndexMap[id]] || {};
-  if (subject) {
-    subject.onNext(item);
-    subject.onCompleted();
+  if (!subject) {
+    subscribeItem(id);
   }
+  subject.onNext(item);
+  subject.onCompleted();
 }
 
 function subscribeItem(id) {
